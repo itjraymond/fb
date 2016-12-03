@@ -167,7 +167,7 @@ body{
 			var dlight = new THREE.DirectionalLight(0xffe900, 0.03);
 			scene.add(dlight);
 
-			var dlight = new THREE.DirectionalLight(0x84b9ff, 0.09);
+			var dlight = new THREE.DirectionalLight(0x84b9ff, 1.2);
 			scene.add(dlight);
 			
 			var alight = new THREE.AmbientLight( 0xffffff ); // soft white light
@@ -188,7 +188,7 @@ body{
 			}
 				
 			
-			var bgMat = new THREE.MeshBasicMaterial( { color: 0xffffff, shading: THREE.FlatShading, transparent:true, opacity:.075, vertexColors: THREE.VertexColors } );
+			var bgMat = new THREE.MeshBasicMaterial( { color: 0xffffff, shading: THREE.FlatShading, transparent:true, opacity:.05, vertexColors: THREE.VertexColors } );
 
 			
 			//var bgMat = new THREE.MeshBasicMaterial( { side:THREE.DoubleSide, opacity:0.1, transparent:true, map:bgTexture } );
@@ -201,23 +201,23 @@ body{
 
 			var mat2 = new THREE.MeshLambertMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0x000000, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0 } );
 
-			var mat3 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0x4286f4, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0 } );
+			var mat3 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xcfe0fc, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0 } );
 
 			var mat4 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0x000000, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0 } );
 
 			var mat5 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xff0000, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
 
-			var mat6 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xff1414, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.25 } );
+			var mat6 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xff6666, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.25 } );
 
-			var mat7 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0x1414ff, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.15 } );
+			var mat7 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xb3b3ff, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.15 } );
 
-			var mat8 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xffa5f6, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
+			var mat8 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xffccfa, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
 
-			var mat9 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0x84daff, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
+			var mat9 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xccf0ff, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
 
 			var mat10 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xffffff, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
 
-			var mat11 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xfffa84, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
+			var mat11 = new THREE.MeshPhongMaterial( { vertexColors: THREE.VertexColors, side:THREE.DoubleSide, ambient: 0xfffdcc, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1 } );
 			
 			
 			
