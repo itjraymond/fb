@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>fatblubber.com</title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<meta property="og:description" content="page02"/>
+		<meta property="og:image" content="http://fatblubber.com/img/fb.png"/>
+		<meta property="og:title" content="fatblubber"/>
+		<meta property="og:url" content="http://fatblubber.com/"/>
+		<meta name="keywords" content="fatblubber, fatblubber.com, three.js, experimental"/>
+		<meta name="author" content="Ben R."/>
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<script>
+			 var JSFiles = ['1.js','2.js','3.js','4.js','5.js']; // JS Files
+			 function loadJS() {
+			    // Pick file
+			    var index = Math.floor(Math.random()*JSFiles.length); 
+
+			    // Append JS file to head section
+			    var script = document.createElement('script');
+			    script.src = JSFiles[index];
+			    document.getElementsByTagName('head')[0].appendChild(script);
+			 };
+		</script>
+	</head>
+
+	<style>
+		body{ cursor:none; }
+	</style>
+
+	<body onload="loadJS();">
+	    <div id="container"></div>
+	    
+		<script src="build/three.min.js"></script>
+		<script src="build/Detector.js"></script>	
+		<script src="js/loaders/DDSLoader.js"></script>
+		<script src="js/loaders/MTLLoader.js"></script>
+		<script src="js/loaders/OBJLoader.js"></script>
+	</body>
+</html>
