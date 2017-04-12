@@ -47,7 +47,7 @@ jQuery(function ($) {
             }, {
                 "track": 6,
                 "name": "Nicolas Jaar - Three Sides of Nazareth",
-                "length": "9:57",
+                "length": "9:54",
                 "file": "06"
             }, {
                 "track": 7,
