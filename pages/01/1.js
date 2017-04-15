@@ -21,7 +21,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 		
 		var canFade=false, info;
         
-		var path = "Assets/Images/CubeMap5/";
+		var path = "assets/images/CubeMap5/";
 		var format = '.png';
 		var urls = [
 			path + 'px' + format, path + 'nx' + format,
@@ -73,7 +73,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 			var alight = new THREE.AmbientLight( 0xffffff ); // soft white light
 			scene.add( alight );
 			
-			bgTexture = THREE.ImageUtils.loadTexture('Assets/Images/bg.jpg');
+			bgTexture = THREE.ImageUtils.loadTexture('assets/images/bg.jpg');
 			bgTexture.wrapS = bgTexture.wrapT = THREE.RepeatWrapping;
 			bgTexture.repeat.set( 1, 1 );
 			
@@ -188,8 +188,8 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				//var rnd = Math.floor(Math.random()*6);
 				
 				var lod2 = new THREE.JSONLoader();
-				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/1.json", function(geometry){
+				//lod.load("assets/shapes/"+rnd+"/scene.js", function(geometry){
+				lod2.load("assets/shapes/1/1.json", function(geometry){
 					var ms2 = new THREE.Mesh(geometry, mat2);
 					var scl = Math.random();
 					ms2.scale = new THREE.Vector3(55, 55, 55);
@@ -214,7 +214,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/0.json", function(geometry){
+				lod2.load("assets/shapes/1/0.json", function(geometry){
 					var ms3 = new THREE.Mesh(geometry, mat3);
 					var scl = Math.random();
 					ms3.scale = new THREE.Vector3(15, 15, 15);
@@ -239,7 +239,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/2.json", function(geometry){
+				lod2.load("assets/shapes/1/2.json", function(geometry){
 					var ms4 = new THREE.Mesh(geometry, mat4);
 					var scl = Math.random();
 					ms4.scale = new THREE.Vector3(11, 44, 244);
@@ -264,7 +264,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/3.json", function(geometry){
+				lod2.load("assets/shapes/1/3.json", function(geometry){
 					var msa = new THREE.Mesh(geometry, mat5);
 					var scl = Math.random();
 					msa.scale = new THREE.Vector3(44, 44, 244);
@@ -289,7 +289,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/3.json", function(geometry){
+				lod2.load("assets/shapes/1/3.json", function(geometry){
 					var ms5 = new THREE.Mesh(geometry, mat6);
 					var scl = Math.random();
 					ms5.scale = new THREE.Vector3(55, 55, 55);
@@ -314,7 +314,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/4.json", function(geometry){
+				lod2.load("assets/shapes/1/4.json", function(geometry){
 					var ms6 = new THREE.Mesh(geometry, mat7);
 					var scl = Math.random();
 					ms6.scale = new THREE.Vector3(55, 55, 55);
@@ -339,7 +339,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/5.json", function(geometry){
+				lod2.load("assets/shapes/1/5.json", function(geometry){
 					var ms7 = new THREE.Mesh(geometry, mat8);
 					var scl = Math.random();
 					ms7.scale = new THREE.Vector3(55, 55, 55);
@@ -364,7 +364,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/6.json", function(geometry){
+				lod2.load("assets/shapes/1/6.json", function(geometry){
 					var ms8 = new THREE.Mesh(geometry, mat9);
 					var scl = Math.random();
 					ms8.scale = new THREE.Vector3(90, 90, 90);
@@ -389,7 +389,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/7.json", function(geometry){
+				lod2.load("assets/shapes/1/7.json", function(geometry){
 					var ms9 = new THREE.Mesh(geometry, mat10);
 					var scl = Math.random();
 					ms9.scale = new THREE.Vector3(90, 90, 90);
@@ -413,7 +413,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/8.json", function(geometry){
+				lod2.load("assets/shapes/1/8.json", function(geometry){
 					var ms10 = new THREE.Mesh(geometry, mat11);
 					var scl = Math.random();
 					ms10.scale = new THREE.Vector3(90, 90, 90);
@@ -438,7 +438,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/hand.json", function(geometry){
+				lod2.load("assets/shapes/1/hand.json", function(geometry){
 					var ms11 = new THREE.Mesh(geometry, mat12);
 					var scl = Math.random();
 					ms11.scale = new THREE.Vector3(3, 3, 3);
@@ -463,7 +463,7 @@ if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 				
 				var lod2 = new THREE.JSONLoader();
 				//lod.load("Assets/Shapes/"+rnd+"/scene.js", function(geometry){
-				lod2.load("Assets/Shapes/1/head.json", function(geometry){
+				lod2.load("assets/shapes/1/head.json", function(geometry){
 					var ms12 = new THREE.Mesh(geometry, mat13);
 					var scl = Math.random();
 					ms12.scale = new THREE.Vector3(1, 1, 1);
