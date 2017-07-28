@@ -1,0 +1,109 @@
+body{
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	color:#fcfcfc;	
+	font-family:Helvetica, sans-serif;
+	font-size:13px;
+	text-align:center;
+
+}
+
+/* unvisited link */
+a:link {
+    color: #000000;
+}
+
+/* visited link */
+a:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+}
+
+/* selected link */
+a:active {
+    color: #000000;
+}
+
+#info {
+	position: absolute;
+	bottom: 10px; 
+	right:10px;
+	padding:4px; 
+	text-align:right;
+	background:#000;
+	-webkit-transition:opacity .5s ease-out;-moz-transition:opacity .5s ease-out;-o-transition:opacity .5s ease-out;
+}
+#info a {
+	color:#fff;
+	text-decoration:underline;
+}
+#bottom{
+	margin: auto;
+  	position: absolute;
+  	top: 97%; left: 0%; bottom: 0; right: 0;
+	font-size: 11px;
+	
+	text-align: left;
+	font-family: monospace;
+	color:#000000;
+}
+
+#top{
+	margin: auto;
+  	position: absolute;
+  	top: 0%; left: 0%; bottom: 0; right: 0;
+	font-size: 11px;
+	
+	text-align: left;
+	font-family: monospace;
+	cursor:default;
+	color:#000000;
+}
+
+#top p{
+	font-size: 12px;
+}
+
+.contact{
+	font-size: 6em;
+	font-style: italic;
+	font-family: monospace;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.responded {
+    color:green;
+}
+.checking,.unchecked {
+    color:#FF8C00;
+}
+.timeout {
+    color:red;
+}
+ul span {
+    color: green;
+}
+
+ul {
+    list-style:none;
+    padding-left:0;
+}​
+html{
+	background-color: #fcfcfc;
+    
+
+}
+body{
+	text-indent: 0px;
+	background-color: #fcfcfc;
+}
+
+a {text-decoration: none; }
