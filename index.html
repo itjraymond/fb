@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>fatblubber.com</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css">
+		<style>
+			body {
+				margin: 0px;
+				background-color: #000000;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+	<div id="top" style="color: white">
+	fatblubber.com<br>
+	theme: 'consumerlife expired'<br>
+	</div>
+
+	<div id="bottom" style="color: white">
+	<marquee direction="left">education	266763480	246
+national	266389541	247
+g	265529989	248
+car	264751873	249
+design	264480758	250
+take	264367578	251
+posted	263854639	252
+internet	263838579	253
+h	262147538	254
+address	261892390	255
+community	261865039	256
+within	261397406	257
+states	260950758	258
+area	259893849	259
+want	258805212	260
+v	257470177	261
+o	257114200	262
+phone	256659829	263
+dvd	256604453	264
+shipping	256536359	265
+reserved	256448958	266
+subject	256230197	267
+between	255438269	268
+forum	254501670	269
+family	254200488	270
+long	252548188	271
+based	252409500	272
+code	250263384	273
+show	247561112	274
+even	245709195	275
+black	244791281	276
+check	244514540	277
+special	244325032	278
+prices	243440241	279
+index	242900250	280
+website	242899948	281
+being	242795309	282
+women	242573252	283
+much	242348918	284
+sign	242309594	285
+file	241885067	286
+link	240423729	287
+open	239681854	288
+today	239301910	289
+technology	238697606	290
+south	238598899	291
+case	235590239	292
+project	235325646	293
+same	234833864	294
+pages	234011127	295
+uk	232791775	296
+version	232454894	297
+section	232270007	298
+own	232024685	299
+found	232011041	300
+sports	231876585	301
+house	231336249	302
+related	231130274	303
+security	230033485	304
+both	228657004	305
+county	227582678	306
+american	227548257	307
+photo	227148376	308
+game	227148015	309
+members	226696649	310
+power	226621020	311
+while	226203954	312
+care	225355490	313
+network	225250849	314
+down	224946680	315
+k	224561639	316
+computer	224198056	317
+systems	223578232	318
+three	223421591	319
+total	222657937	320
+place	220994454	321
+end	220845737	322
+following	220710180	323
+download	220654148	324
+him	219547790	325
+without	219210190	326
+per	218961711	327
+access	218012318	328
+think	217884104	329</marquee>
+	</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/85/three.js"></script>
+		<script>
+
+			var camera, scene, renderer;
+			var mesh;
+
+			init();
+			animate();
+
+			function init() {
+
+				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000000 );
+				camera.position.z = 400;
+
+				scene = new THREE.Scene();
+
+
+
+				var spotLight = new THREE.SpotLight( 0x444444 );
+spotLight.position.set( 100, 1000, 100 );
+
+spotLight.castShadow = true;
+
+spotLight.shadow.mapSize.width = 1024;
+spotLight.shadow.mapSize.height = 1024;
+
+spotLight.shadow.camera.near = 500;
+spotLight.shadow.camera.far = 4000;
+spotLight.shadow.camera.fov = 30;
+
+scene.add( spotLight );; 
+
+var light = new THREE.AmbientLight( 0xa3a3a3 ); // soft white light
+				scene.add( light );
+
+
+
+
+				var texture = new THREE.TextureLoader().load( 'fb/a.jpg' );
+				var texture2 = new THREE.TextureLoader().load( 'fb/c.jpg' );
+				var texture3 = new THREE.TextureLoader().load( 'fb/b.jpg' );
+				var texture4 = new THREE.TextureLoader().load( 'fb/d.jpg' );
+				var texture5 = new THREE.TextureLoader().load( 'fb/e.jpe' );
+				var dmtexture = new THREE.TextureLoader().load( 'fb/dm.jpg' );
+
+
+				
+				var material = new THREE.MeshPhongMaterial( {  color: 0xffffff, map: texture, transparent: true, opacity: 0.1} );
+				var material2 = new THREE.MeshPhongMaterial( {  color: 0xffffff, map: texture2, displacementMap: dmtexture, displacementScale: .1, bumpMap: dmtexture, bumpScale: 0.5 } );
+
+				var material3 = new THREE.MeshPhongMaterial( {  color: 0xffffff, map: texture3,  bumpMap: texture3, bumpScale: 1,transparent: true, opacity: 0.1 } );
+				var material4 = new THREE.MeshPhongMaterial( {  color: 0xffffff, map: texture4,  bumpMap: texture4, bumpScale: 1,transparent: true, opacity: 0.1 } );
+
+				var material5 = new THREE.MeshPhongMaterial( {  color: 0xffffff, map: texture5,  bumpMap: texture5, bumpScale: 1,transparent: true, opacity: 0.1 } );
+
+
+
+				loader = new THREE.JSONLoader();
+
+				// ***** T *****
+
+			    loader.load( "fb/1.json", function( geometry ) {
+			        mesh = new THREE.Mesh( geometry, material2 );
+			        mesh.scale.set( 100, 100, 100 );
+			        mesh.position.y = 4;
+			        mesh.traverse( function( node ) {
+    if( node.material ) {
+        node.material.side = THREE.DoubleSide;
+    }
+});
+
+
+			        scene.add( mesh );
+			    } );
+
+
+
+			geometry = new THREE.CubeGeometry(800, 800, 800, 200);
+		    geometry.computeTangents();
+
+
+
+		    mesh2 = new THREE.Mesh( geometry, material);
+		    mesh2.position.z = 0;
+		mesh2.doubleSided = true;
+		mesh2.material.side = THREE.BackSide;
+		    scene.add(mesh2);
+
+
+		    geometry = new THREE.CubeGeometry(800, 800, 800, 25);
+		    geometry.computeTangents();
+
+
+
+		    mesh3 = new THREE.Mesh( geometry, material3);
+		    mesh3.position.y = 0;
+		    mesh3.position.x = 0;
+		mesh3.doubleSided = true;
+		mesh3.material.side = THREE.BackSide;
+		geometry.center();
+		    scene.add(mesh3);
+
+
+
+
+		    geometry = new THREE.CubeGeometry(800, 800, 800, 25);
+		    geometry.computeTangents();
+
+
+
+		    mesh4 = new THREE.Mesh( geometry, material4);
+		    mesh4.position.y = 0;
+		    mesh4.position.x = 0;
+		mesh4.doubleSided = true;
+		mesh4.material.side = THREE.BackSide;
+		geometry.center();
+		    scene.add(mesh4);
+
+
+
+
+		    geometry = new THREE.CubeGeometry(800, 800, 800, 25);
+		    geometry.computeTangents();
+
+
+
+		    mesh5 = new THREE.Mesh( geometry, material5);
+		    mesh5.position.y = 0;
+		    mesh5.position.x = 0;
+		mesh5.doubleSided = true;
+		mesh5.material.side = THREE.BackSide;
+		geometry.center();
+		    scene.add(mesh5);
+
+
+
+				renderer = new THREE.WebGLRenderer({antialias:false, preserveDrawingBuffer: true});
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				document.body.appendChild( renderer.domElement );
+				renderer.autoClearColor = false;
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				mesh.rotation.x += 0.005;
+				mesh.rotation.y += 0.01;
+
+				mesh2.rotation.x += 0.005;
+				mesh2.rotation.y += 0.01;
+
+				mesh3.rotation.x += 0.01;
+
+				mesh4.rotation.y += 0.01;
+
+				mesh5.rotation.x += 0.008;
+				mesh2.rotation.y += 0.005;
+
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>
